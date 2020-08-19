@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: springkubernetesdemo
+spec:
+  selector:
+    app: springkubernetesdemo
+  ports:
+  - protocol: TCP
+    port: 9090
+    targetPort: 9090
+    nodePort: 32000
+  type: NodePort
